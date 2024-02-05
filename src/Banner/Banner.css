@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto+Mono&display=swap');
+
+:root{
+    --cor-primaria: #FFF8F3;
+    --cor-secundaria: #1C6DD0;
+    --cor-terciaria: #495E57;
+    --cor-extremidade: #1C6DD0;
+
+    --font-montserrat: 'Montserrat', sans-serif;
+    --font-roboto: 'Roboto Mono', monospace;
+}
+
+.banner {
+    background-color: var(--cor-secundaria);
+    display: flex;
+    width: 100%;
+    height: 400px;
+}
+
+.banner-apresentacao{
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-roboto);
+    color: var(--cor-primaria);
+    font-size: 18px;
+    padding: 5% 10% 3% 10%;
+}
+
+.banner-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.banner-links a{
+    display: flex;
+    text-decoration: none;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 2.5px;
+    color: black;
+    width: 200px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-links a:hover{
+    background-color: #2281f4;
+}
+
+.banner img{
+    padding: 3%;
+}
