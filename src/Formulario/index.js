@@ -22,7 +22,7 @@ const Formulario = (props) => {
                 <CampoTexto
                     label='Nome do ativo/passivo'
                     valor={nome}
-                    placeholder='Digite aqui'
+                    placeholder='Digite aquis'
                     aoAlterado={valor => setNome(valor)}
                     obrigatorio={true}
                 />
