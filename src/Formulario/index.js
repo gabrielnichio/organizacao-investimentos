@@ -2,16 +2,25 @@ import { useState } from 'react';
 import CampoTexto from '../CampoTexto';
 import './Formulario.css';
 import Botao from '../Botao';
+import ListaInvestimentos from '../ListaInvestimentos';
 
 const Formulario = (props) => {
+
+    const tiposInvestimentos = ["Ações", "Fundos Imobiliários", "Tesouro Direto", "Renda Fixa", "Exterior"];
 
     const [nome, setNome] = useState('');
     const [valor, setValor] = useState('');
     const [quantidade, setQuantidade] = useState('');
+    const [tipo, setTipo] = useState('');
 
     const aoSalvar = (evento) => {
         evento.preventDefault();
-        console.log(nome, valor, quantidade);
+        props.aoSubmeterInvestimentos({
+            nome,
+            valor,
+            quantidade,
+            tipo
+        });
     }
 
 
@@ -27,7 +36,7 @@ const Formulario = (props) => {
                     obrigatorio={true}
                 />
                 <CampoTexto
-                    label='Valor unitario'
+                    label='Valor unitario' 
                     valor={valor}
                     placeholder='Digite aqui'
                     aoAlterado={valor => setValor(valor)}
@@ -39,6 +48,11 @@ const Formulario = (props) => {
                     placeholder='Digite aqui'
                     aoAlterado={valor => setQuantidade(valor)}
                     obrigatorio={true}
+                />
+                <ListaInvestimentos
+                    label = 'Tipo'
+                    lista = {tiposInvestimentos}
+                    aoAlterado={valor => setTipo(valor)}
                 />
                 <Botao>
                     Submeter investimento
