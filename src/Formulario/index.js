@@ -6,12 +6,11 @@ import ListaInvestimentos from '../ListaInvestimentos';
 
 const Formulario = (props) => {
 
-    const tiposInvestimentos = ["Ações", "Fundos Imobiliários", "Tesouro Direto", "Renda Fixa", "Exterior"];
 
     const [nome, setNome] = useState('');
     const [valor, setValor] = useState('');
     const [quantidade, setQuantidade] = useState('');
-    const [tipo, setTipo] = useState('');
+    const [tipo, setTipo] = useState(props.tipos[0]);
 
     const aoSalvar = (evento) => {
         evento.preventDefault();
@@ -51,7 +50,7 @@ const Formulario = (props) => {
                 />
                 <ListaInvestimentos
                     label = 'Tipo'
-                    lista = {tiposInvestimentos}
+                    lista = {props.tipos}
                     aoAlterado={valor => setTipo(valor)}
                 />
                 <Botao>
