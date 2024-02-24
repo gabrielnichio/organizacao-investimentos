@@ -55,6 +55,8 @@ const Formulario = (props) => {
                 <ListaInvestimentos
                     label = 'Tipo'
                     lista = {props.tipos}
+                    valor = {tipo}
+                    placeholder = "Selecione o tipo do investimento"
                     aoAlterado={valor => setTipo(valor)}
                 />
                 <Botao>
