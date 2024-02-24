@@ -37,7 +37,6 @@ function App(props) {
 
   const cadastraInvestimentos = (investimento) => {
     setInvestimentos([...listaInvestimentos, investimento]);
-    console.log(listaInvestimentos);
   }
 
   return (

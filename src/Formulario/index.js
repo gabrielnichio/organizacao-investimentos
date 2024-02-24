@@ -20,6 +20,10 @@ const Formulario = (props) => {
             quantidade,
             tipo
         });
+        setNome('')
+        setValor('')
+        setQuantidade('')
+        setTipo('')
     }
 
 
@@ -30,7 +34,7 @@ const Formulario = (props) => {
                 <CampoTexto
                     label='Nome do ativo/passivo'
                     valor={nome}
-                    placeholder='Digite aquis'
+                    placeholder='Digite aqui'
                     aoAlterado={valor => setNome(valor)}
                     obrigatorio={true}
                 />

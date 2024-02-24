@@ -10,7 +10,8 @@ const ListaInvestimentos = (props) => {
     return (
         <div className='lista-investimentos'>
             <label>{props.label}</label>
-            <select onChange={aoSelecionar}>
+            <select onChange={aoSelecionar} value={props.valor}>
+                <option key={""}></option>
                 {props.lista.map(value => <option key={value}>{value}</option>)}
             </select>
         </div>
